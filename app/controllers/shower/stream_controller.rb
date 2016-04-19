@@ -5,7 +5,8 @@ class Shower::StreamController < ApplicationController
 
     def index
       response.headers['Content-Type'] = 'text/event-stream'
-      redis = Redis.new(ENV['redis_url'] || '') 
+      redis_url = ENV['redis_url'] || ''
+      redis = Redis.new(url: redis_url)
 
       redis.subscribe(params[:events].split(',') << 'heartbeat') do |on|
         on.message do |event, data|

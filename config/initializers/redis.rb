@@ -1,4 +1,5 @@
-$redis = Redis.new(ENV['redis_url'] || '') 
+redis_url = ENV['redis_url'] || ''
+$redis = Redis.new(url: redis_url) 
 
 heartbeat_thread = Thread.new do
   while true
