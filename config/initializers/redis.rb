@@ -1,4 +1,4 @@
-$redis = Redis.new
+$redis = Redis.new(Settings.redis_url || '') 
 
 heartbeat_thread = Thread.new do
   while true
