@@ -18,5 +18,4 @@ Gem::Specification.new do |s|
   s.add_dependency 'rails', '~> 4.0'
   s.add_dependency 'coffee-rails', '~> 4.0'
   s.add_dependency 'redis', '~> 3.1', '>= 3.1.0'
-  s.add_dependency 'settingslogic'
 end

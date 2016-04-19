@@ -1,4 +1,4 @@
-$redis = Redis.new($redis_url || '') 
+$redis = Redis.new($redis_url) 
 
 heartbeat_thread = Thread.new do
   while true
